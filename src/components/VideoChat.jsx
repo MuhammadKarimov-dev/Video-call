@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import io from "socket.io-client";
 import "../styles/VideoChat.css";
 
-const socket = io("http://localhost:5001"); // signaling server manzili o'zgartirildi
+const socket = io(window.location.origin); // O'sha saytning o'zidan socket ulanish
 
 const VideoChat = () => {
   const localVideoRef = useRef(null);
